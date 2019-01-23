@@ -7,17 +7,82 @@
 </head>
 <body>
   <header><h1>Sweater <g>Weather</g></h1></header>
-      <div class = "current-weather" align = "center">Current Weather
+    <div class = "location">
+      <input id = "city-state" type = "text" placeholder = "Ex: Denver,CO">
+      <button class = "button" id = "get-location" onclick = "getLocation()">Get My Location</button>
+    </div>
+    <div class = "wrapper">
+      <div class = "current-weather">
+        <h2 align = "center">Current Weather</h2>
+        <div id = "current-weather-icon" ></div>
+        <div id = "current-weather-summary" ></div>
+        <div id = "current-weather-temp" ></div>
+        <div id = "todays-high" ></div>
+        <div id = "todays-low" ></div>
+        <div id = "current-city" ></div>
+        <div id = "current-date-time" ></div>
       </div>
-      <div class = "detailed-weather" align = "center"> Detailed
+      <div class = "detailed-weather">
+        <h2 align = "center">Detailed</h2>
+        <div id = "detailed-summary" ></div>
+        <div id = "detailed-feels-like" ></div>
+        <div id = "detailed-humidity" ></div>
+        <div id = "detailed-visibility" ></div>
+        <div id = "detailed-uvindex" ></div>
+        <div id = "detailed-full-description" ></div>
+        <div id = "detailed-tonight-description" ></div>
       </div>
-      <div class = "forecast" align = "left"> Forecast
+      <div class = "forecast">
+        <h2>Forecast</h2>
+        <div class = "hourly-grid">
+          <div class = "hourly-grid-1">
+            <div id = "hour-1"></div>
+            <div id = "icon-1"></div>
+            <div id = "temp-1"></div>
+          </div>
+          <div class = "hourly-grid-2">
+            <div id = "hour-2"></div>
+            <div id = "icon-2"></div>
+            <div id = "temp-2"></div>
+          </div>
+          <div class = "hourly-grid-3">
+            <div id = "hour-3"></div>
+            <div id = "icon-3"></div>
+            <div id = "temp-3"></div>
+          </div>
+          <div class = "hourly-grid-4">
+            <div id = "hour-4"></div>
+            <div id = "icon-4"></div>
+            <div id = "temp-4"></div>
+          </div>
+          <div class = "hourly-grid-5">
+            <div id = "hour-5"></div>
+            <div id = "icon-5"></div>
+            <div id = "temp-5"></div>
+          </div>
+          <div class = "hourly-grid-6">
+            <div id = "hour-6"></div>
+            <div id = "icon-6"></div>
+            <div id = "temp-6"></div>
+          </div>
+          <div class = "hourly-grid-7">
+            <div id = "hour-7"></div>
+            <div id = "icon-7"></div>
+            <div id = "temp-7"></div>
+          </div>
+          <div class = "hourly-grid-8">
+            <div id = "hour-8"></div>
+            <div id = "icon-8"></div>
+            <div id = "temp-8"></div>
+          </div>
+        </div>
       </div>
+    </div>
       <!--  the a tag below can link you to another HTML page  -->
       <!--  if you click the button in the browser right now, you'll get an error because that is not a real file path -->
 
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src="main.bundle.js"></script>
-    <script src = "lib/index.js" type= "application/javascript"></script>
 </body>
+<script src = "lib/index.js" ></script>
 </html>
