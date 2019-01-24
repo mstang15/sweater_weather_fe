@@ -14,8 +14,8 @@
     <div class = "wrapper">
       <div class = "current-weather">
         <h2 align = "center">Current Weather</h2>
-        <div id = "current-weather-icon" ></div>
         <div id = "current-weather-summary" ></div>
+        <canvas id ="current-weather-icon" width="60" length="60"></canvas>
         <div id = "current-weather-temp" ></div>
         <div id = "todays-high" ></div>
         <div id = "todays-low" ></div>
@@ -37,43 +37,55 @@
         <div class = "hourly-grid">
           <div class = "hourly-grid-1">
             <div id = "hour-1"></div>
-            <div id = "icon-1"></div>
+            <canvas id ="icon-1" width="128" height="128"></canvas>
             <div id = "temp-1"></div>
           </div>
           <div class = "hourly-grid-2">
             <div id = "hour-2"></div>
-            <div id = "icon-2"></div>
+            <canvas id ="icon-2" width="128" height="128"></canvas>
             <div id = "temp-2"></div>
           </div>
           <div class = "hourly-grid-3">
             <div id = "hour-3"></div>
-            <div id = "icon-3"></div>
+            <canvas id ="icon-3" width="128" height="128"></canvas>
             <div id = "temp-3"></div>
           </div>
           <div class = "hourly-grid-4">
             <div id = "hour-4"></div>
-            <div id = "icon-4"></div>
+            <canvas id ="icon-4" width="128" height="128"></canvas>
             <div id = "temp-4"></div>
           </div>
           <div class = "hourly-grid-5">
             <div id = "hour-5"></div>
-            <div id = "icon-5"></div>
+            <canvas id ="icon-5" width="128" height="128"></canvas>
             <div id = "temp-5"></div>
           </div>
           <div class = "hourly-grid-6">
             <div id = "hour-6"></div>
-            <div id = "icon-6"></div>
+            <canvas id ="icon-6" width="128" height="128"></canvas>
             <div id = "temp-6"></div>
           </div>
           <div class = "hourly-grid-7">
             <div id = "hour-7"></div>
-            <div id = "icon-7"></div>
+            <canvas id ="icon-7" width="128" height="128"></canvas>
             <div id = "temp-7"></div>
           </div>
           <div class = "hourly-grid-8">
             <div id = "hour-8"></div>
-            <div id = "icon-8"></div>
+            <canvas id ="icon-8" width="128" height="128"></canvas>
             <div id = "temp-8"></div>
+          </div>
+        </div>
+        <div class = "daily-grid">
+          <div class = "daily-grid-1">
+          </div>
+          <div class = "daily-grid-2">
+          </div>
+          <div class = "daily-grid-3">
+          </div>
+          <div class = "daily-grid-4">
+          </div>
+          <div class = "daily-grid-5">
           </div>
         </div>
       </div>
@@ -82,6 +94,7 @@
       <!--  if you click the button in the browser right now, you'll get an error because that is not a real file path -->
 
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src = 'https://gitcdn.link/cdn/darkskyapp/skycons/master/skycons.js'></script>
     <script src="main.bundle.js"></script>
 </body>
 <script src = "lib/index.js" ></script>
