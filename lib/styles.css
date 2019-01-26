@@ -85,7 +85,7 @@ h1 g {
 .daily-grid{
   display: grid;
   grid-template-columns: repeat(5,1fr);
-  grid-template-rows: repeat(5,1fr);
+  grid-template-rows: 5fr;
   text-align: center;
 }
 
@@ -145,7 +145,7 @@ h1 g {
 
 .forecast {
   width: 1fr;
-  height: 300px;
+  height: auto;
   background-color: #9FA4A9;
   padding: 20px;
   border-radius: 12px;
