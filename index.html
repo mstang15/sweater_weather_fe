@@ -9,29 +9,56 @@
   <header><h1>Sweater <g>Weather</g></h1></header>
     <div class = "location">
       <input id = "city-state" type = "text" placeholder = "Ex: Denver,CO">
-      <button class = "button" id = "get-location" onclick = "getLocation()">Get My Location</button>
+      <button class = "button" id = "get-location" onclick = "getLocation()">Search For New City</button>
     </div>
+    <div class = "favorites-grid">
+      <button class = "fav-button" id = "favorite-1" onclick = "getLocationButton(1)"></button>
+      <button class = "fav-button" id = "favorite-2" onclick = "getLocationButton(2)"></button>
+      <button class = "fav-button" id = "favorite-3" onclick = "getLocationButton(3)"></button>
+      <button class = "fav-button" id = "favorite-4" onclick = "getLocationButton(4)"></button>
+      <button class = "fav-button" id = "favorite-5" onclick = "getLocationButton(5)"></button>
+    </div>
+    <!-- style="display: none" -->
     <div class = "wrapper">
       <div class = "current-weather">
-        <h2 align = "center">Current Weather</h2>
-        <div id = "current-weather-summary" ></div>
-        <canvas id ="current-weather-icon" width="60" length="60"></canvas>
+        <h2 id= "span-two" align = "center">Current Weather</h2>
+        <div>
+        <canvas id ="current-weather-icon" width="50" height="60"></canvas>
+        <span id = "current-weather-summary" ></span>
         <div id = "current-weather-temp" ></div>
-        <div id = "todays-high" ></div>
-        <div id = "todays-low" ></div>
         <div id = "current-city" ></div>
-        <div id = "current-date-time" ></div>
-        <!-- <button class = "button" id = "add-favorite" onclick = "postFavorite()"></div> -->
+        <button class = "button" id = "add-favorite" onclick = "postFavorite()">Favorite</button>
       </div>
+      <div>
+        <div class = "current-temp-date">
+          <div>
+            <span><img id = "arrow-up" height="42" width="42"><h2 id = "todays-high" ></h2></span>
+          </div>
+          <div>
+          <span><img id = "arrow-down" height="42" width="42"><h2 id = "todays-low" ></h2></span>
+        </div>
+        <div id = "date-time">
+          <div id = "current-date" ></div>
+          <div id = "current-time" ></div>
+        </div>
+        </div>
+        </div>
+        </div>
       <div class = "detailed-weather">
-        <h2 align = "center">Detailed</h2>
-        <div id = "detailed-summary" ></div>
-        <div id = "detailed-feels-like" ></div>
-        <div id = "detailed-humidity" ></div>
-        <div id = "detailed-visibility" ></div>
-        <div id = "detailed-uvindex" ></div>
-        <div id = "detailed-full-description" ></div>
-        <div id = "detailed-tonight-description" ></div>
+        <h2 id = "span-two" align = "center">Details</h2>
+          <div>
+            <canvas id ="detailed-weather-icon" width="200" height="200"></canvas>
+            <div id = "detailed-summary" ></div>
+            <div id = "detailed-full-description" ></div>
+          </div>
+          <div>
+            <div id = "detailed-stats">
+              <div id = "detailed-feels-like" ></div>
+              <div id = "detailed-humidity" ></div>
+              <div id = "detailed-visibility" ></div>
+              <div id = "detailed-uvindex" ></div>
+          </div>
+          </div>
       </div>
       <div class = "forecast">
         <h2>Forecast</h2>
@@ -79,14 +106,59 @@
         </div>
         <div class = "daily-grid">
           <div class = "daily-grid-1">
+            <div id = "day-1-day"></div>
+            <div id = "day-1-weather"></div>
+            <div id = "day-1-icon"></div>
+            <div id = "day-1-humidity"></div>
+            <canvas id = "day-1-humidity-icon" ></canvas>
+            <img id = "arrow-up" height="42" width="42">
+            <div id = "day-1-high"></div>
+            <img id = "arrow-down" height="42" width="42">
+            <div id = "day-1-low"></div>
           </div>
           <div class = "daily-grid-2">
+            <div id = "day-2-day"></div>
+            <div id = "day-2-weather"></div>
+            <div id = "day-2-icon"></div>
+            <div id = "day-2-humidity"></div>
+            <canvas id = "day-2-humidity-icon" ></canvas>
+            <img id = "arrow-up" height="42" width="42">
+            <div id = "day-2-high"></div>
+            <img id = "arrow-down" height="42" width="42">
+            <div id = "day-2-low"></div>
           </div>
           <div class = "daily-grid-3">
+            <div id = "day-3-day"></div>
+            <div id = "day-3-weather"></div>
+            <div id = "day-3-icon"></div>
+            <div id = "day-3-humidity"></div>
+            <canvas id = "day-3-humidity-icon" ></canvas>
+            <img id = "arrow-up" height="42" width="42">
+            <div id = "day-3-high"></div>
+            <img id = "arrow-down" height="42" width="42">
+            <div id = "day-3-low"></div>
           </div>
           <div class = "daily-grid-4">
+            <div id = "day-4-day"></div>
+            <div id = "day-4-weather"></div>
+            <div id = "day-4-icon"></div>
+            <div id = "day-4-humidity"></div>
+            <canvas id = "day-4-humidity-icon" ></canvas>
+            <img id = "arrow-up" height="42" width="42">
+            <div id = "day-4-high"></div>
+            <img id = "arrow-down" height="42" width="42">
+            <div id = "day-4-low"></div>
           </div>
           <div class = "daily-grid-5">
+            <div id = "day-5-day"></div>
+            <div id = "day-5-weather"></div>
+            <div id = "day-5-icon"></div>
+            <div id = "day-5-humidity"></div>
+            <canvas id = "day-5-humidity-icon" ></canvas>
+            <img id = "arrow-up" height="42" width="42">
+            <div id = "day-5-high"></div>
+            <img id = "arrow-down" height="42" width="42">
+            <div id = "day-5-low"></div>
           </div>
         </div>
       </div>
