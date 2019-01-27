@@ -169,3 +169,11 @@ h1 g {
 .button:enabled:hover {
   background-color: #FFA69E;
 }
+
+.toggle-content {
+	display: none;
+}
+
+.toggle-content.is-visible {
+	display: block;
+}
