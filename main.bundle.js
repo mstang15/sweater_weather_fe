@@ -66,7 +66,28 @@
 	var detailedFullSumm = document.getElementById('detailed-full-description');
 	var detailedTonSumm = document.getElementById('detailed-tonight-description');
 
+	var show = function show(elem) {
+	  elem.classList.add('is-visible');
+	};
+
+	var hide = function hide(elem) {
+	  elem.classList.remove('is-visible');
+	};
+
+	var toggle = function toggle(elem) {
+	  elem.classList.toggle('is-visible');
+	};
+
+	function logOut() {
+	  location.reload();
+	}
+
 	function logIn() {
+	  hide(document.getElementById('login-button'));
+	  show(document.getElementById('logout-button'));
+	  show(document.getElementById('location-toggle'));
+	  show(document.getElementById('favorites-toggle'));
+
 	  var requestLogIn = new XMLHttpRequest();
 	  var log_in_url = url + 'api/v1/sessions?email=megstang@example.com&password=password';
 	  requestLogIn.open("POST", log_in_url, true);
@@ -83,10 +104,13 @@
 	}
 
 	function getLocation(favorite) {
+	  show(document.getElementById('location-toggle'));
+	  show(document.getElementById('favorites-toggle'));
 	  var city_state = document.getElementById('city-state').value;
 	  if (favorite != undefined) {
 	    var city_state = favorite;
 	  }
+	  show(document.getElementById('wrapper-toggle'));
 	  var location_url = url + "api/v1/forecast?" + "location=" + city_state;
 	  var requestLoc = new XMLHttpRequest();
 	  requestLoc.open('GET', location_url);
