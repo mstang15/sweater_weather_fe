@@ -27,17 +27,17 @@ A user is able to favorite and remove favorites from the app. Once a user adds a
 ![alt text](readme_images/favorite.png)
 
 ## Built With
-<ul>
-JavaScript
-jQuery
-Express
-Mocha
-Chai
-CSS
-HTML
-AJAX
-sweater_weather API (https://github.com/mstang15/sweater_weather) 
-</ul>
+
+<ul>JavaScript</ul>
+<ul>jQuery</ul>
+<ul>Express</ul>
+<ul>Mocha</ul>
+<ul>Chai</ul>
+<ul>CSS</ul>
+<ul>HTML</ul>
+<ul>AJAX</ul>
+<ul>sweater_weather API (https://github.com/mstang15/sweater_weather) </ul>
+
 
 
 ## Developer
