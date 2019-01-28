@@ -6,14 +6,6 @@ You can find the backend here: https://github.com/mstang15/sweater_weather
 
 <h1>App Overview</h1>
 
-<h2>Wireframe</h2>
-
-![alt text](http://backend.turing.io/module3/projects/images/sweater_weather/root.png)
-
-<h2>color palette</h2>
-https://coolors.co/424b54-dce0d9-d6ebb2-ffa69e-9fa4a9
-
-
 When a user visits the app, they are taken to a screen that allows them to log in (for now it is a default log in). Once the user is logged in, they can see any loaded favorites. If it is their first time on the app, there will appear to be no favorites, such as in the picture below. The app only allows users to favorite up to five cities. 
 
 ![alt text](readme_images/loggedin.png))
@@ -25,6 +17,22 @@ After a user either selects their favorite or types in a new city, the weather d
 A user is able to favorite and remove favorites from the app. Once a user adds a favorite, it is displayed in the favorite bar. A user can click on the favorites in the favorite bar to change the content of their screen. 
 
 ![alt text](readme_images/favorite.png)
+
+<h2>Wireframe</h2>
+
+![alt text](http://backend.turing.io/module3/projects/images/sweater_weather/root.png)
+
+<h2>color palette</h2>
+https://coolors.co/424b54-dce0d9-d6ebb2-ffa69e-9fa4a9
+
+##Set Up
+1. clone repo
+2. run 'git clone <repo link>' in terminal
+3. cd sweater_weather_fe
+4. npm install 
+5. npm start 
+6. You can visit localhost:3000 to see the app running locally
+
 
 ## Built With
 
