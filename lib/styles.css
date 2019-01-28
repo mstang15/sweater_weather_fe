@@ -159,6 +159,15 @@ h1 g {
   position: relative;
 }
 
+#login-button{
+  background-color: #929497;
+  color: #FFFFFF;
+}
+
+#login-button:enabled:hover{
+  background-color: #FFA69E;
+}
+
 .button {
   background-color: #929497;
   color: #FFFFFF;
@@ -176,4 +185,11 @@ h1 g {
 
 .toggle-content.is-visible {
 	display: block;
+}
+
+.day-of-week{
+  font-family: "Papyrus", fantasy;
+  text-align: center;
+  font-weight: 800;
+  font-size: 25px;
 }

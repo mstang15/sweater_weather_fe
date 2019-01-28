@@ -66,7 +66,28 @@
 	var detailedFullSumm = document.getElementById('detailed-full-description');
 	var detailedTonSumm = document.getElementById('detailed-tonight-description');
 
+	var show = function show(elem) {
+	  elem.classList.add('is-visible');
+	};
+
+	var hide = function hide(elem) {
+	  elem.classList.remove('is-visible');
+	};
+
+	var toggle = function toggle(elem) {
+	  elem.classList.toggle('is-visible');
+	};
+
+	function logOut() {
+	  location.reload();
+	}
+
 	function logIn() {
+	  hide(document.getElementById('login-button'));
+	  show(document.getElementById('logout-button'));
+	  show(document.getElementById('location-toggle'));
+	  show(document.getElementById('favorites-toggle'));
+
 	  var requestLogIn = new XMLHttpRequest();
 	  var log_in_url = url + 'api/v1/sessions?email=megstang@example.com&password=password';
 	  requestLogIn.open("POST", log_in_url, true);
@@ -83,10 +104,13 @@
 	}
 
 	function getLocation(favorite) {
+	  show(document.getElementById('location-toggle'));
+	  show(document.getElementById('favorites-toggle'));
 	  var city_state = document.getElementById('city-state').value;
 	  if (favorite != undefined) {
 	    var city_state = favorite;
 	  }
+	  show(document.getElementById('wrapper-toggle'));
 	  var location_url = url + "api/v1/forecast?" + "location=" + city_state;
 	  var requestLoc = new XMLHttpRequest();
 	  requestLoc.open('GET', location_url);
@@ -134,23 +158,23 @@
 	  document.getElementById("arrow-up").src = "https://s3.amazonaws.com/peoplepng/wp-content/uploads/2018/07/15072226/Up-Arrow-PNG-Picture.png";
 	  document.getElementById("arrow-down").src = "http://www.stickpng.com/assets/thumbs/580b57fcd9996e24bc43c457.png";
 	  printIcon(weatherIcon, response.current_weather.icon);
-	  weatherSummary.insertAdjacentHTML('beforeend', response.current_weather.summary);
-	  weatherCurrentTemp.insertAdjacentHTML('beforeend', Math.round(response.current_weather.temperature) + '\xB0');
-	  weatherTodaysHigh.insertAdjacentHTML('beforeend', Math.round(response.daily_weather.data[0].temperatureHigh) + '\xB0');
-	  weatherTodaysLow.insertAdjacentHTML('beforeend', Math.round(response.daily_weather.data[0].temperatureLow) + '\xB0');
-	  currentCity.insertAdjacentHTML('beforeend', response.location);
-	  date.insertAdjacentHTML('beforeend', currentDate());
-	  time.insertAdjacentHTML('beforeend', currentTime());
+	  weatherSummary.insertHTML = response.current_weather.summary);
+	  weatherCurrentTemp.insertHTML = Math.round(response.current_weather.temperature) + '\xB0');
+	  weatherTodaysHigh.insertHTML = Math.round(response.daily_weather.data[0].temperatureHigh) + '\xB0');
+	  weatherTodaysLow.insertHTML = Math.round(response.daily_weather.data[0].temperatureLow) + '\xB0');
+	  currentCity.insertHTML = response.location);
+	  date.insertHTML = currentDate());
+	  time.insertHTML = currentTime());
 	}
 
 	function detailedWeather(response) {
 	  printIcon(detweatherIcon, response.current_weather.icon);
-	  detailedSummary.insertAdjacentHTML('beforeend', response.current_weather.summary);
-	  detailedHumidity.insertAdjacentHTML('beforeend', 'Humidity: ' + Math.round(response.current_weather.humidity * 100) + '%');
-	  detailedFeelsLike.insertAdjacentHTML('beforeend', 'Feels Like: ' + Math.round(response.current_weather.apparentTemperature) + '\xB0');
-	  detailedVisibility.insertAdjacentHTML('beforeend', 'Visibility: ' + response.current_weather.visibility + ' miles');
-	  detailedUvIndex.insertAdjacentHTML('beforeend', 'UV Index: ' + response.current_weather.uvIndex);
-	  detailedFullSumm.insertAdjacentHTML('beforeend', 'Today: ' + response.daily_weather.data[0].summary);
+	  detailedSummary.insertHTML = response.current_weather.summary);
+	  detailedHumidity.insertHTML = 'Humidity: ' + Math.round(response.current_weather.humidity * 100) + '%');
+	  detailedFeelsLike.insertHTML = 'Feels Like: ' + Math.round(response.current_weather.apparentTemperature) + '\xB0');
+	  detailedVisibility.insertHTML = 'Visibility: ' + response.current_weather.visibility + ' miles');
+	  detailedUvIndex.insertHTML = 'UV Index: ' + response.current_weather.uvIndex);
+	  detailedFullSumm.insertHTML = 'Today: ' + response.daily_weather.data[0].summary);
 	}
 
 	function eightHourForecast(response) {
