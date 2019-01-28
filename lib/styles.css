@@ -159,14 +159,6 @@ h1 g {
   position: relative;
 }
 
-#login-button{
-  background-color: #929497;
-  color: #FFFFFF;
-}
-
-#login-button:enabled:hover{
-  background-color: #FFA69E;
-}
 
 .button {
   background-color: #929497;
