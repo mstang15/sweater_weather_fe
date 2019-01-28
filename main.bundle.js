@@ -158,23 +158,23 @@
 	  document.getElementById("arrow-up").src = "https://s3.amazonaws.com/peoplepng/wp-content/uploads/2018/07/15072226/Up-Arrow-PNG-Picture.png";
 	  document.getElementById("arrow-down").src = "http://www.stickpng.com/assets/thumbs/580b57fcd9996e24bc43c457.png";
 	  printIcon(weatherIcon, response.current_weather.icon);
-	  weatherSummary.insertAdjacentHTML('beforeend', response.current_weather.summary);
-	  weatherCurrentTemp.insertAdjacentHTML('beforeend', Math.round(response.current_weather.temperature) + '\xB0');
-	  weatherTodaysHigh.insertAdjacentHTML('beforeend', Math.round(response.daily_weather.data[0].temperatureHigh) + '\xB0');
-	  weatherTodaysLow.insertAdjacentHTML('beforeend', Math.round(response.daily_weather.data[0].temperatureLow) + '\xB0');
-	  currentCity.insertAdjacentHTML('beforeend', response.location);
-	  date.insertAdjacentHTML('beforeend', currentDate());
-	  time.insertAdjacentHTML('beforeend', currentTime());
+	  weatherSummary.insertHTML = response.current_weather.summary);
+	  weatherCurrentTemp.insertHTML = Math.round(response.current_weather.temperature) + '\xB0');
+	  weatherTodaysHigh.insertHTML = Math.round(response.daily_weather.data[0].temperatureHigh) + '\xB0');
+	  weatherTodaysLow.insertHTML = Math.round(response.daily_weather.data[0].temperatureLow) + '\xB0');
+	  currentCity.insertHTML = response.location);
+	  date.insertHTML = currentDate());
+	  time.insertHTML = currentTime());
 	}
 
 	function detailedWeather(response) {
 	  printIcon(detweatherIcon, response.current_weather.icon);
-	  detailedSummary.insertAdjacentHTML('beforeend', response.current_weather.summary);
-	  detailedHumidity.insertAdjacentHTML('beforeend', 'Humidity: ' + Math.round(response.current_weather.humidity * 100) + '%');
-	  detailedFeelsLike.insertAdjacentHTML('beforeend', 'Feels Like: ' + Math.round(response.current_weather.apparentTemperature) + '\xB0');
-	  detailedVisibility.insertAdjacentHTML('beforeend', 'Visibility: ' + response.current_weather.visibility + ' miles');
-	  detailedUvIndex.insertAdjacentHTML('beforeend', 'UV Index: ' + response.current_weather.uvIndex);
-	  detailedFullSumm.insertAdjacentHTML('beforeend', 'Today: ' + response.daily_weather.data[0].summary);
+	  detailedSummary.insertHTML = response.current_weather.summary);
+	  detailedHumidity.insertHTML = 'Humidity: ' + Math.round(response.current_weather.humidity * 100) + '%');
+	  detailedFeelsLike.insertHTML = 'Feels Like: ' + Math.round(response.current_weather.apparentTemperature) + '\xB0');
+	  detailedVisibility.insertHTML = 'Visibility: ' + response.current_weather.visibility + ' miles');
+	  detailedUvIndex.insertHTML = 'UV Index: ' + response.current_weather.uvIndex);
+	  detailedFullSumm.insertHTML = 'Today: ' + response.daily_weather.data[0].summary);
 	}
 
 	function eightHourForecast(response) {
