@@ -27,7 +27,7 @@ A user is able to favorite and remove favorites from the app. Once a user adds a
 ![alt text](readme_images/favorite.png)
 
 ## Built With
-
+<ul>
 JavaScript
 jQuery
 Express
@@ -37,7 +37,7 @@ CSS
 HTML
 AJAX
 sweater_weather API (https://github.com/mstang15/sweater_weather) 
-
+</ul>
 
 
 ## Developer
