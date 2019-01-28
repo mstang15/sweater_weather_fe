@@ -25,7 +25,7 @@ A user is able to favorite and remove favorites from the app. Once a user adds a
 <h2>color palette</h2>
 https://coolors.co/424b54-dce0d9-d6ebb2-ffa69e-9fa4a9
 
-##Set Up
+## Set Up
 1. clone repo
 2. run 'git clone <repo link>' in terminal
 3. cd sweater_weather_fe
