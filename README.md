@@ -1,5 +1,5 @@
 # Sweater Weather Front End
-https://mstang15.github.io/sweater_weather_fe/
+https://megstang.github.io/sweater_weather_fe/
 
 This application is written in javascript and it dogfoods the Sweater Weather API that was built on Ruby on Rails. 
 You can find the backend here: https://github.com/mstang15/sweater_weather
